@@ -1,6 +1,6 @@
 //x Crear estructura básica HTML
 // X Traerme los elementos que necesito de HTML a JS
-//Escuchar evento en botón
+// x Escuchar evento en botón
 //Hacer función de numero random
 //Hacer funcion manejadora del evento
 //Hacer función condicional según el value del input y el random
@@ -16,10 +16,18 @@ const tryParagraph = document.querySelector('.js_try');
 
 
 
+function getRandomNumber(max) { 
+     return Math.ceil(Math.random() * max);
+} 
+
+
+
 
 function handleClick(ev){
     ev.preventDefault();
-    console.log("Funciona");
+    console.log("Mi número aleatorio es" + " " + getRandomNumber(100));
+    
+    
 
 }
 
