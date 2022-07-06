@@ -26,12 +26,7 @@ function getRandomNumber(max) {
     
 }; 
 
-
-
-function compare(){
-    const inputValue = parseInt(input.value);
-    console.log("Mi número aleatorio es" + " " + random);
-
+function giveFeedback(inputValue){
     if( inputValue === random){
         clueParagraph.innerHTML = "Has ganado campeona!!!";
         clueParagraph.classList.add("winner");
@@ -49,6 +44,13 @@ function compare(){
     else if (inputValue < random){
         clueParagraph.innerHTML = "PISTA! Tu número es demasiado bajo";
     }
+};
+
+function compare(){
+    const inputValue = parseInt(input.value);
+    console.log("Mi número aleatorio es" + " " + random);
+
+   giveFeedback(inputValue)
     
 };
 
