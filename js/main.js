@@ -55,7 +55,7 @@ function compare(){
 };
 
 
-btn.onclick = function () {
+function countClick(ev) {
     count++;
     tryParagraph.innerHTML = "Número de intentos"+ " " + count;
 };
@@ -64,6 +64,8 @@ btn.onclick = function () {
 function handleClick(ev){
     ev.preventDefault();
     compare();
+    countClick();
+
 }
 
 
