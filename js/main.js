@@ -18,7 +18,7 @@ const tryParagraph = document.querySelector('.js_try');
 
 //VARIABLES GLOBALES
 let count = 0;
-
+let random = getRandomNumber(100);
 
 //FUNCIONES
 function getRandomNumber(max) { 
@@ -26,7 +26,7 @@ function getRandomNumber(max) {
     
 }; 
 
-let random = getRandomNumber(100);
+
 
 function compare(){
     const inputValue = parseInt(input.value);
@@ -36,6 +36,7 @@ function compare(){
 
     if( inputValue === random){
         clueParagraph.innerHTML = "Has ganado campeona!!!";
+        clueParagraph.classList.add("winner");
     }
     else if( inputValue > 100){
         clueParagraph.innerHTML = "Tu número debe estar entre 1-100";
@@ -45,10 +46,10 @@ function compare(){
         clueParagraph.innerHTML = "Tu número debe estar entre 1-100";
     }
     else if (inputValue > random){
-        clueParagraph.innerHTML = "Tú número es demasiado alto";
+        clueParagraph.innerHTML = " PISTA! Tú número es demasiado alto";
     }
     else if (inputValue < random){
-        clueParagraph.innerHTML = "Tu número es demasiado bajo";
+        clueParagraph.innerHTML = "PISTA! Tu número es demasiado bajo";
     }
     
 };

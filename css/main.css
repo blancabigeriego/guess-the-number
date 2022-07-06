@@ -1,10 +1,19 @@
+*{
+    margin: 0;
+}
+
+
 .header{
     background-color: wheat;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     color: rgb(75, 29, 29);
-    
+    text-align: center;
+}
 
+.main{
+    background-color: azure;
+    height: 100vh;
 }
 
 .form{
@@ -14,6 +23,7 @@
     align-items: center;
     justify-content: center;
     color: rgb(75, 29, 29);
+    padding: 120px 60px 60px 60px;
 }
 
 .title{
@@ -42,6 +52,7 @@
     border-radius: 10px;
     border-style: hidden;
     color: rgb(75, 29, 29);
+    box-shadow: 3px 3px 3px rgb(92, 26, 26);
     
 }
 
@@ -52,14 +63,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 
 }
  .clue{
-   border: 1px solid rgb(75, 29, 29);
+   border: 2px solid rgb(75, 29, 29);
+   border-radius: 10px;
    padding: 2px 20px;  
+   background-color: wheat;
  }
 
  .try{
-    border: 1px solid rgb(75, 29, 29);
+    border: 2px solid rgb(75, 29, 29);
+    border-radius: 10px;
     padding: 2px 20px; 
+    background-color: wheat;
+ }
+
+ .winner{
+    background-color: rgb(112, 112, 186);
+    color:azure;
+    font-size: 30px;
+    margin-bottom: 15px;
  }
