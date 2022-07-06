@@ -5,7 +5,7 @@
 //X Hacer funcion manejadora del evento
 //X Hacer función condicional según el value del input y el random
 // X Hacer función contador de prueba
-//Publicar
+//X Publicar
 
 
 'use strict';
@@ -30,8 +30,6 @@ function getRandomNumber(max) {
 
 function compare(){
     const inputValue = parseInt(input.value);
-    
-    
     console.log("Mi número aleatorio es" + " " + random);
 
     if( inputValue === random){
