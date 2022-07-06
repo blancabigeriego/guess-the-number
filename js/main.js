@@ -26,8 +26,17 @@ function getRandomNumber(max) {
     
 }; 
 
+function writeClue(){
+    clueParagraph.innerHTML= ""
+}
+
 function giveFeedback(inputValue){
-    if( inputValue === random){
+
+    if(inputValue === '' || isNaN(inputValue)){
+        clueParagraph.innerHTML = "Error: tienes que escribir un número";
+    }
+
+    else if( inputValue === random){
         clueParagraph.innerHTML = "Has ganado campeona!!!";
         clueParagraph.classList.add("winner");
     }
@@ -50,7 +59,7 @@ function compare(){
     const inputValue = parseInt(input.value);
     console.log("Mi número aleatorio es" + " " + random);
 
-   giveFeedback(inputValue)
+   giveFeedback(inputValue);
     
 };
 
@@ -65,7 +74,6 @@ function handleClick(ev){
     ev.preventDefault();
     compare();
     countClick();
-
 }
 
 
