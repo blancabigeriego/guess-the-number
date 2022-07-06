@@ -26,41 +26,40 @@ function getRandomNumber(max) {
     
 }; 
 
-function writeClue(){
-    clueParagraph.innerHTML= ""
+function writeClue(message){
+    clueParagraph.innerHTML= message;
 }
 
 function giveFeedback(inputValue){
 
     if(inputValue === '' || isNaN(inputValue)){
-        clueParagraph.innerHTML = "Error: tienes que escribir un número";
+        writeClue("Error: tienes que escribir un número");
     }
 
     else if( inputValue === random){
-        clueParagraph.innerHTML = "Has ganado campeona!!!";
+        writeClue("Has ganado campeona!!!");
         clueParagraph.classList.add("winner");
     }
     else if( inputValue > 100){
-        clueParagraph.innerHTML = "Tu número debe estar entre 1-100";
+        writeClue("Tu número debe estar entre 1-100");
      }
 
     else if (inputValue <= 0){
-        clueParagraph.innerHTML = "Tu número debe estar entre 1-100";
+        writeClue("Tu número debe estar entre 1-100");
     }
     else if (inputValue > random){
-        clueParagraph.innerHTML = " PISTA! Tú número es demasiado alto";
+        writeClue(" PISTA! Tú número es demasiado alto");
     }
     else if (inputValue < random){
-        clueParagraph.innerHTML = "PISTA! Tu número es demasiado bajo";
+        writeClue( "PISTA! Tu número es demasiado bajo");
     }
 };
 
 function compare(){
     const inputValue = parseInt(input.value);
     console.log("Mi número aleatorio es" + " " + random);
-
-   giveFeedback(inputValue);
     
+    giveFeedback(inputValue);
 };
 
 
